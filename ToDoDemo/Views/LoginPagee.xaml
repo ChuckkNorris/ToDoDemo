@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="ToDoDemo.Views.LoginPagee"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToDoDemo.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource sxBackground}">
+        <SplitView>
+            <SplitView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="-90"/>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF07B898" Offset="0.103"/>
+                    <GradientStop Color="#19005B53" Offset="0.13"/>
+                </LinearGradientBrush>
+            </SplitView.Background>
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Aww Hamburgers Menu-->
+                    <Grid>
+                        <Button Content="&#xE700;" FontFamily="Segoe MDL2 Assets" Background="{x:Null}" FontSize="21.333" FontWeight="Bold"></Button>
+
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Button Content="&#59194;" FontFamily="Segoe MDL2 Assets" Background="{x:Null}" FontSize="21.333" FontWeight="Bold"></Button>
+
+                    </Grid>
+                </Grid>
+              
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>
