@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ToDoDemo.Helpers;
 
 namespace ToDoDemo.Models {
-    public class Task {
+    public class ToDo {
         [POAttribute(columnName: "title")]
         public string Title { get; set; }
 
