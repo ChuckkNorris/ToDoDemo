@@ -102,7 +102,8 @@
     <Compile Include="Common\BootStrapper.cs" />
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\POAttribute.cs" />
-    <Compile Include="Models\ToDo.cs" />
+    <Compile Include="Models\Mission.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Mvvm\Command.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
@@ -118,7 +119,11 @@
     <Compile Include="Services\NavigationService\NavigationFacade.cs" />
     <Compile Include="Services\NavigationService\NavigationService.cs" />
     <Compile Include="Services\ParseService.cs" />
+    <Compile Include="ViewModels\AddMissionViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\AddTaskPage.xaml.cs">
+      <DependentUpon>AddTaskPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -155,14 +160,13 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Styles\RainbowStylin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
     <Page Include="Styles\SplitViewStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddTaskPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Shell.xaml">
       <SubType>Designer</SubType>
@@ -176,6 +180,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

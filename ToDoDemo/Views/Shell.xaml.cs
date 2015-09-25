@@ -42,7 +42,9 @@ namespace ToDoDemo.Views {
         }
         // back
         Mvvm.Command _backCommand;
-        public Mvvm.Command BackCommand { get { return _backCommand ?? (_backCommand = new Mvvm.Command(ExecuteBack, CanBack)); } }
+        public Mvvm.Command BackCommand {
+            get { return _backCommand ?? (_backCommand = new Mvvm.Command(ExecuteBack, CanBack)); }
+        }
         private bool CanBack() {
             var nav = (App.Current as App).NavigationService;
             return nav.CanGoBack;

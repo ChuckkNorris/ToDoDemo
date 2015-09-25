@@ -19,13 +19,9 @@ namespace ToDoDemo.Views {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class LoginPage : Page {
-        public LoginPage() {
+    public sealed partial class AddTaskPage : Page {
+        public AddTaskPage() {
             this.InitializeComponent();
-        }
-
-        private void TextBox_KeyUp(object sender, KeyRoutedEventArgs e) {
-
         }
     }
 }

@@ -9,6 +9,8 @@
     RequestedTheme="Light">
 
     <common:BootStrapper.Resources>
+        
+        <!--Main Application Background Style-->
         <Style x:Key="sxBackground" TargetType="Grid">
             <Setter Property="Background">
                 <Setter.Value>
@@ -19,6 +21,26 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
+        <!--Grid Title-->
+        <Style x:Key="sxGridTitle" TargetType="Grid">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        
+        <!--Title Text-->
+        <Style x:Key="sxTitleText" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontWeight" Value="ExtraBlack" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+        
+        <!--Grid Content-->
+        <Style x:Key="sxGridContent" TargetType="Grid">
+            <Setter Property="Margin" Value="5,0,5,5" />
+        </Style>
+
     </common:BootStrapper.Resources>
 
 </common:BootStrapper>

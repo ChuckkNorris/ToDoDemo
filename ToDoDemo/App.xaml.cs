@@ -34,14 +34,15 @@ namespace ToDoDemo {
         // FIRST!
         public override Task OnInitializeAsync() {
             // Sets Frame to Shell (with Splitview and singleton RootFrame as Content)
-            Window.Current.Content = new Views.Shell(base.RootFrame);
+            NavigationService.Navigate(typeof(Views.LoginPage));
+           // Window.Current.Content = new Views.Shell(base.RootFrame);
             return base.OnInitializeAsync();
         }
 
         // SECOND
         public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args) {
             // Navigate RootFrame to first page
-            (App.Current as App).NavigationService.Navigate(typeof(Views.LoginPage));
+          //  (App.Current as App).NavigationService.Navigate(typeof(Views.LoginPage));
             return base.OnInitializeAsync();
         }
         /// <summary>

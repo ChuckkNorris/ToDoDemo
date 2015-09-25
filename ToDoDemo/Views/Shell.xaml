@@ -58,9 +58,17 @@
                     </RadioButton>
                     
                     <!--TaskView Page--> 
-                    <RadioButton Command="{Binding NavCommand}" Content="Tasks" GroupName="Nav">
+                    <RadioButton Command="{Binding NavCommand}" Content="Current Missions" GroupName="Nav">
                         <RadioButton.CommandParameter>
                             <views:NavType Type="views:TaskViewPage" />
+                        </RadioButton.CommandParameter>
+                        <RadioButton.Tag>
+                            <TextBlock Text="" />
+                        </RadioButton.Tag>
+                    </RadioButton>
+                    <RadioButton Command="{Binding NavCommand}" Content="Add Mission" GroupName="Nav">
+                        <RadioButton.CommandParameter>
+                            <views:NavType Type="views:AddTaskPage" />
                         </RadioButton.CommandParameter>
                         <RadioButton.Tag>
                             <TextBlock Text="" />

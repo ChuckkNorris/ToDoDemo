@@ -6,6 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:ToDoDemo.ViewModels"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d">
     
     <!-- Set Page Datacontext as LoginViewModel -->
@@ -14,10 +16,22 @@
         <vm:LoginViewModel/>
     </Page.DataContext>
     
-    <Grid Background="White" Style="{StaticResource sxBackground}">
+    <Grid Style="{StaticResource sxBackground}">
         <StackPanel>
             <TextBlock FontFamily="Segoe UI" Text="Login Page"/>
             <!--Page Content-->
+            <Grid>
+                <StackPanel>
+                    <TextBox Text="123" x:Name="txtTest">
+                        <i:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="KeyDown">
+                                <core:InvokeCommandAction Command="{Binding Path=TextTestKeyDown}" CommandParameter="{Binding ElementName=txtTest}"/>
+                            </core:EventTriggerBehavior>
+                        </i:Interaction.Behaviors>
+                    </TextBox>
+                    <Button Content="Login" Command="{Binding LoginSuccess}"/> 
+                </StackPanel>
+            </Grid>
             <Grid>
                 <ListView ItemsSource="{Binding Path=ToDoCollection}">
                     <ListView.ItemTemplate>
